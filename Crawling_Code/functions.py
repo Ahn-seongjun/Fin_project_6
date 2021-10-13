@@ -30,13 +30,15 @@ def get_desc(info):
         accident = info[i]['v_rec_comment']
         price = info[i]['n_price']
         mile = info[i]['n_mileage']
+        model = info[i]['v_class_headnm']+info[i]['v_class_detailnm']
         desc.append({'name':name,
             'brand':brand,
             'color':color,
             'fuel':fuel,
             'accident':accident,
             'price':price,
-            'mile':mile})
+            'mile':mile,
+            'model':model})
     return desc
 
 
@@ -54,4 +56,4 @@ def final():
     for i in infomation:
         for j in i:
             df = df.append(j,ignore_index=True)
-    df.to_csv('test.csv',sep=',',na_rep='NaN')
+    df.to_csv('k_car.csv',sep=',',na_rep='NaN')
