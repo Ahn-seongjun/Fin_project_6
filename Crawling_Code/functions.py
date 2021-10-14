@@ -31,6 +31,7 @@ def get_desc(info):
         price = info[i]['n_price']
         mile = info[i]['n_mileage']
         model = info[i]['v_class_headnm']+info[i]['v_class_detailnm']
+        year = info[i]['v_begin_year']
         desc.append({'name':name,
             'brand':brand,
             'color':color,
@@ -38,7 +39,8 @@ def get_desc(info):
             'accident':accident,
             'price':price,
             'mile':mile,
-            'model':model})
+            'model':model,
+            'year':year})
     return desc
 
 
