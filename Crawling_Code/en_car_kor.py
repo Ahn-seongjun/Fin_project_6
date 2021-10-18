@@ -7,8 +7,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
-def get_page(i):
-    res = requests.get(f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.Y._.Color.%EA%B2%80%EC%A0%95%EC%83%89.)&sr=%7CModifiedDate%7C{i*50}%7C50')
+def get_page(color,i):
+    res = requests.get(f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.Y._.Color.{color}.)&sr=%7CModifiedDate%7C{i*50}%7C50')
     return res
 def get_info(res):
     try:
@@ -34,10 +34,19 @@ def get_info(res):
 
 
 def get_all():
-    information = []
-    for i in range(1,436):
-        res = get_page(i)
-        information.append(get_info(res))
+    try:
+        information = []
+        color = ['검정색', '검정투톤', '쥐색', '은색', '은회색', '은색투톤',
+             '흰색', '진주색', '흰색투톤', '진주투톤', '은하색', '명은색',
+             '갈대색', '연금색', '갈색', '갈색투톤', '금색', '금색투톤',
+             '청색', '하늘색', '담녹색', '녹색', '연두색', '청옥색', '빨간색',
+             '주황색', '자주색', '보라색', '분홍색', '노란색']
+        for c in color:
+            for i in range(1,488):
+                res = get_page(c,i)
+                information.append(get_info(res))
+    except:
+        pass
     return information
 
 
@@ -47,7 +56,7 @@ def final():
     for i in infomation:
         for j in i:
             df = df.append(j,ignore_index=True)
-    df.to_csv('en_car_kor_black.csv',sep=',',na_rep='NaN')
+    df.to_csv('en_car_kor_test.csv',sep=',',na_rep='NaN')
 
 final()
 
