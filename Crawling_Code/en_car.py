@@ -8,7 +8,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
 def get_page(color,i):
-    res = requests.get(f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.N._.Color.{color}.)&sr=%7CModifiedDate%7C{i*50}%7C50')
+    res = requests.get(f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.N._.Trust.Warranty._.Color.{color}.)&sr=%7CModifiedDate%7C{i*50}%7C50')
+
     return res
 def get_info(res):
     try:
@@ -24,10 +25,10 @@ def get_info(res):
             year = box[i]['FormYear']
             model = box[i]['Badge']
             location = box[i]['OfficeCityState']
-            desc.append({'brand':brand,'mile':mile,
-                'name':name,'fuel':fuel,
+            desc.append({'brand':brand,'km':mile,
+                'name':name,'type':fuel,
                 'price':price,'year':year,
-                'model':model,'location':location})
+                'info':model,'location':location})
     except:
         pass
     return desc
@@ -37,8 +38,8 @@ def get_info(res):
 
 def get_all():
     information = []
-    for i in range(1,2):
-        res = get_page('연두색',i)
+    for i in range(0,5):
+        res = get_page('노란색',i)
         information.append(get_info(res))
     return information
 
@@ -49,11 +50,11 @@ def final():
     for i in infomation:
         for j in i:
             df = df.append(j,ignore_index=True)
-    df.to_csv('en_car_light_green.csv',sep=',',na_rep='NaN')
+    df.to_csv('no_acc_for/29.csv',sep=',',na_rep='NaN')
 
 
 
-
+final()
 
 # def get_all():
 #     information = []
