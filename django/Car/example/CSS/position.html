@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Position 속성</title>
+    <style type="text/css"> 	
+        #parent {
+            position:relative;
+			width:200px;
+			height:300px;
+			border:solid 5px #000000;
+			margin: 50px 0 0 50px;
+		}
+/* boxA,boxB,boxC에 동일한 속성이 적용*/
+        #boxA, #boxB, #boxC {
+			width:80px;
+			height:80px;
+		}
+
+		#boxA {background-color:#ff0000;}
+		#boxB {background-color:#00ff00;}
+		#boxC {background-color:#ffff00;}
+
+        #boxB{
+        /*position:relative;*/
+        position:absolute; /*상위 태그에 position  설정 여부에 따라 위치가 달라짐*/
+        top:20px;
+        left:30px;
+        }
+	</style>
+</head>
+	
+<body>
+	<div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+	</div>
+</body>
+</html>
+
+
+
+

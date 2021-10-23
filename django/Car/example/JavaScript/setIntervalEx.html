@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>setInterval() 연습문제</title>
+		<script type="text/javascript">
+			var count = 0; //누적 변수 초기화
+			
+			function start() { // 출력 문구를 내보내고 확인버튼을 누르면 showImage 호출하기위해 setInterval 함수 호출
+				alert("이미지 10개 출력");
+	           //인터발 설정 코드
+	           timerID = setInterval('showImg()',1000); // 1000 = 1초에 한번씩 이미지 호출
+			}
+			
+			function showImg() {						
+				count++; //함수 호출 시 마다 누적 변수가 1씩 증가
+								
+				if(count % 2 == 1)	//홀수 일때
+					//이미지 추가 코드
+					//document.body.innerHTML += "<img src='image/apple.png'>"
+					document.write("<img src='image/apple.png'>")
+				else
+					//이미지 추가 코드
+					document.write("<img src='image/bomb.png'>")
+				
+				if(count == 10) {
+					// 인터발 삭제
+					clearInterval(timerID);
+				}
+			}				
+		</script>		
+	<body onLoad = "start()">
+	</body>
+</html>
+

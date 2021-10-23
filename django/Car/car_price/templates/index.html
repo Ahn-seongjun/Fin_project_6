@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/slideShow.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <title>day-car homepage</title>
     <style>
         body{
-            background-color: white;
+            background-color: black;
             background-repeat : no-repeat;
             background-size : 1300px;
         }
         form {
-          font
+          font: verdana;
           position : relative;
           left:40%
 
@@ -18,11 +21,62 @@
     </style>
 </head>
 <body>
+<div id="wrap">
+        	<header>
+        		<div id="headerBox">
+	            	<div id="logoBox"><a href="index.html"><img src="image/logo2.png" id="logoImg"></a></div>
+	            	<div id="topMenuBox">중고차 구입 중고차 팔기</div>
+            	</div>
+            </header>
 
-<a href="/buy">구매</a>
-/
-<a href="/sell">판매</a>
+        <section>
+            	<article  id="slideShow"> <!-- 슬라이드 쇼 -->
+                     </div>
+            		    <div id="slideShowBox">
+                    	<div id="slidePanel">
+                            <img src="image/car0.png" class="slideImage">
+                            <img src="image/car2.png" class="slideImage">
+                            <img src="image/car3.png" class="slideImage">
+                            <img src="image/car4.png" class="slideImage">
+                        </div> <!-- slidePanel 끝 -->
+                     </div> <!-- slideShowBox 끝 -->
+                </article>
 
+
+                <footer>
+                    <div class="wrap">
+    <h1>후기</h1>
+    <form name="reviewform" class="reviewform" method="post" action="/save">
+        <input type="hidden" name="rate" id="rate" value="0"/>
+        <div class="review_rating">
+            <div class="warning_msg">별점을 남겨주세요.</div>
+            <div class="rating">
+                <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
+                <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
+                <label for="rating1"></label>
+                <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
+                <label for="rating2"></label>
+                <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" >
+                <label for="rating3"></label>
+                <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
+                <label for="rating4"></label>
+                <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
+                <label for="rating5"></label>
+            </div>
+        </div>
+            	<div id="footerBox">
+	            	<div id="bottomMenuBox">
+	            		<ul id="bottomMenuItem">
+
+                            <li><h4><a href="#">Day-car Homepage 리뷰작성</a></h4></li>
+                            <textarea rows="10" cols="50" name="content"></textarea>
+                            <input type="submit" value="등록"><input type="reset" value="취소">
+
+                    	</ul>
+	            	</div>
+	            	<div id="companyInfo"><img src="image/logo.png"></div>
+                </div>
+            </footer>
 
 
 </body>

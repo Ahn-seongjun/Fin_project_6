@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>조상/부모/형제 요소 선택자</title> 
+        <style type="text/css">
+			div {
+				border:1px solid #000000;
+				padding:10px;
+				display:inline-block;
+			}
+		</style>
+        <script src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//모두 동일
+				//backgroundColor/ background-color/ background
+
+			//p 태그 기준 모든 조상 노란색을 바탕으로
+			$('p').parents().css('backgroundColor', 'yellow');
+
+			 //조상 area 영역 흰색
+ 			$('p').parents('#area').css('backgroundColor', 'white');
+
+			//p태그의 조상 중 조상 c1, c2
+			$('p').parents('#c1,#c2').css('backgroundColor', 'brown');
+ 			//p의 부모
+ 			$('p').parent().css('backgroundColor', 'green');
+
+			//c1 바로 다음 요소 - 나의 바로 다음 형제
+			$('#c1').next().css('backgroundColor','pink')
+
+			//c2 바로 다음 모든 요소
+			$('#c1').nextAll().css('backgroundColor','orange')
+
+			 //c4 이전 모든 요소의 글자색을 파란색으로
+			$('#c4').prevAll().css('color','blue')
+
+			//c1 다음 c4 이전 : c2, 23 을 둥근 사각형으로
+			$('#c1').nextUntil('#c4').css('borderRadius','20px')
+
+			//c3 이전 c1 다음 : c2
+			$('#c3').prevUntil('#c1').css('border','solid 5px red')
+			});	
+		</script>               
+	</head>
+	<body>		
+        <h3>조상/부모/형제 요소 선택자</h3>      
+        <div id="area">  
+        	area 영역 
+            <div id="c1">
+            	c1영역
+                <div id="s1">
+                	s1 영역
+                    <p>p</p>
+            	</div>
+            </div>	 
+            <div id="c2">
+            	c2영역
+                <div id="s2">
+                	s2 영역
+                	<p>p</p>
+            	</div>
+            </div>
+            <div id="c3">
+            	c3영역
+                <div id="s3">
+                	s3 영역
+                	<p>p</p>
+            	</div>
+            </div>
+            <div id="c4">
+            	c4영역
+                <div id="s4">
+                	s4 영역
+                	<p>p</p>
+            	</div>
+            </div>
+         </div>   	
+	</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* slideShow.css */
+
+#slideShow {
+    position:relative;
+    background-color:black;
+    height:520px;
+    line-height:520px;
+    border-bottom:solid #CCC 1px;
+}
+
+/* 슬라이드이미지 영역 */
+#slideShowBox {
+    width:1250px;
+    height:480px; /*아랫쪽에 컨트롤 패널 들어가야되니까 */
+    text-align:center;
+    overflow:hidden; /* 이미지가 영역 벗어나면 숨김 */
+}
+
+/* 슬라이드 패널 */
+#slidePanel {
+    position:relative; /*부모영역은 주로 relative - 슬라이드 이미지의 부모는 슬라이드 패널*/
+    width:6400px;
+    height:480px;
+}
+
+/* 슬라이드 이미지 */
+.slideImage {
+    float:left;
+    width:1280px;
+    height:480px;
+}
+

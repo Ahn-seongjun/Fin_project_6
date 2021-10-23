@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inlineBlock 예제</title>
+	<style type="text/css"> 
+    /*  display 속성이 없으면  block 이 디폴트/행으로배치/여백이 있음
+    .greenBox {
+        width:150px;
+        height:75px;
+        margin:10px;
+        border: solid 3px #73AD21;
+    }*/
+    /* display:inline이기때문에 옆으로 나란히 배치, 여백없이 내용 만큼만 공간 차지
+     .greenBox {
+        display:inline;
+        width:150px;
+        height:75px;
+        margin:10px;
+        border: solid 3px #73AD21;
+    }*/
+   /* display:inline-block이기 때문에 옆으로 나란히 배치, 여백을 갖는다 */
+     .greenBox {
+        display:inline-block;
+        float:right; /*left/right를 사용할 수 있다 */
+        width:150px;
+        height:75px;
+        margin:10px;
+        border: solid 3px #73AD21;
+    }
+	</style>
+</head>
+<body>
+
+</body>
+	<h2>display 속성 (block / inline / inline-block)</h2>
+
+    <div class="greenBox">박스 1</div>
+    <div class="greenBox">박스 2</div>
+    <div class="greenBox">박스 3</div>
+    <div class="greenBox">박스 4</div>
+</html>
+
+
+
