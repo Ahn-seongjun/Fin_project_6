@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
+import pymysql
 
-def get_page():
-    url = f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.Y.)&sr=%7CModifiedDate%7C0%7C50'
+def get_page(i):
+    url = f'http://api.encar.com/search/car/list/premium?count=true&q=(And.Hidden.N._.CarType.Y.)&sr=%7CModifiedDate%7C{i*50}%7C50'
     res = requests.get(url)
     return res
 
@@ -30,10 +31,28 @@ def get_info(res):
 def get_all():
     try:
         information = []
-        res = get_page()
-        information.append(get_info(res))
+        for i in range(1640):
+            res = get_page(i)
+            information.append(get_info(res))
     except:
         pass
     return information
 
-print(get_all())
+car_db = pymysql.connect(
+    user='root',
+    passwd='0000',
+    host='127.0.0.1',
+    db='car_info',
+    charset='utf8'
+)
+
+
+
+
+
+cursor = car_db.cursor(pymysql.cursors.DictCursor)
+info = get_all()
+insert_data = sum(info, [])
+insert_sql2 = "INSERT INTO `en_car` VALUES (%(brand)s,%(name)s,%(info)s,%(type)s,%(km)s,%(year)s,%(location)s,%(price)s,%(link)s);"
+cursor.executemany(insert_sql2, insert_data)
+car_db.commit()

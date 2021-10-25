@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/***** header의 topmenu */
+/*문서 내의 모든 ul태그에 적용*/
+ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+
+}
+#topMenuBox{
+    float: right; /*오른쪽 정렬*/
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+/********** MainMenu ****/
+#mainMenuBox{
+    width: 1280px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #CCC;
+    z-index: 10;
+    border-top: solid #CCC 1px;
+    border-bottom: solid #CCC 1px;
+}
+
+#mainMenuBox ul{
+    margin : 0;
+    }
+
+#mainMenuBox li{
+    float: left;
+    text-align: center;
+    width: 24.8%;
+    height: 33px;
+    line-height: 30px;
+    border : solid 1px black;
+    text-decoration: none;
+
+}
+
+/* #mainMenuBox li:first-child{ 첫번째 메인메뉴 항목 선택 - special */
+    /* width: 19%; */
+    /* border : solid 3px black; */
+/* }  */ */
+
+#mainMenuBox ul li a {
+    text-decoration: none; /*밑줄 없애기*/
+    color:black;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#mainMenuBox ul li a:hover {
+    color: red;
+}
+
+/*****subMenu****/
+
+
+#searchbox {
+    background-color:navy;
+    height:300px;
+
+}

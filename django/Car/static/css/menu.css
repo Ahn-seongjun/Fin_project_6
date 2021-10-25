@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/***** header의 topmenu */
+/*문서 내의 모든 ul태그에 적용*/
+ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+
+}
+#topMenuBox{
+    float: right; /*오른쪽 정렬*/
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+/********** MainMenu ****/
+#mainMenuBox{
+    width: 1280px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #CCC;
+    z-index: 10;
+    border-top: solid #CCC 1px;
+    border-bottom: solid #CCC 1px;
+}
+
+#mainMenuBox ul{
+    margin : 0;
+    }
+
+#mainMenuBox li{
+    float: left;
+    text-align: center;
+    width: 24.8%;
+    height: 33px;
+    line-height: 30px;
+    border : solid 1px black;
+
+}
+
+/* #mainMenuBox li:first-child{ 첫번째 메인메뉴 항목 선택 - special */
+    /* width: 19%; */
+    /* border : solid 3px black; */
+/* }  */ */
+
+#mainMenuBox ul li a {
+    text-decoration: none; /*밑줄 없애기*/
+    color:black;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#mainMenuBox ul li a:hover {
+    color: red;
+}
+
+/*****subMenu****/
+#subMenuBox{
+    width : 1280px;
+    height: 160px;
+    background-color: white;
+    text-align: center;
+    z-index: 10;
+    padding-bottom: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+.subMenuItem{
+    width: 15%;
+    background-color: white;
+    border-left: solid #CCC 1px;
+    border-right: solid #CCC 1px;
+    margin-top: 10px;
+}
+#subMenuItem1{
+    position : absolute;
+    margin-left: 5%;
+
+}
+
+#subMenuItem2{
+    position : absolute;
+    margin-left: 20%;
+
+}
+
+#subMenuItem3{
+    position : absolute;
+    margin-left: 35%;
+
+}
+
+#subMenuItem4{
+    position : absolute;
+    margin-left: 50%;
+
+}
+#subMenuItem5{
+    position : absolute;
+    margin-left: 65%;
+
+}
+
+#subMenuItem6{
+    position : absolute;
+    margin-left: 80%;
+
+}
+
+.subMenuItem ul{
+    background-color: white;
+}
+
+.subMenuItem ul li{
+    height: 35px;
+    line-height: 35px;
+}
+
+.subMenuItem ul li a{
+    display: inline-block;
+    color:#333333;
+    text-decoration: none;
+}
+
+.subMenuItem ul li a:hover{
+    background-color: white;
+    text-decoration: underline;
+    color: black;
+}
+
+#bottomMenuBox{
+    height: 30px;
+    line-height: 30px;
+}
+
+#bottomMenuBox li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+#bottomMenuBox a{
+
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}

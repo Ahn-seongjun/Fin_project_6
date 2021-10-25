@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+
+#option{
+    width:1280px;
+    height:35px;
+    line-height:35px;
+    background:#ffffff;
+    border-top:solid #CCC 1px;
+    border-bottom:solid #CCC 1px;
+}
+}
