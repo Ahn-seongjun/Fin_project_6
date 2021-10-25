@@ -1,128 +1,70 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta http-equiv="imagetoolbar" content="no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>세종경영자문</title>
+    <meta charset="UTF-8">
+    <title>Day-Car</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/menu.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/slideShow.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/tabMenu.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/product.css">
+		<script src="../static/js/jquery-3.5.1.min.js"></script>
+		<script src="../static/js/subMenu.js"></script>
+		<script src="../static/js/slideShow.js"></script>
+		<script src="../static/js/tabMenu.js"></script>
+		<script src="../static/js/index.js"></script>
+	<script src="../static/js/checklist.js"></script>
+		<script type="text/javascript"></script>
 
-<!-- 웹 브라우저 아이콘
-<link rel="shortcut icon" href="http://www.sjcounsel.com/theme/beesflow/img/favicon.ico" />
-<link rel="stylesheet" href="http://www.sjcounsel.com/theme/beesflow/js/slick.css" />
-<link rel="icon" href="http://www.sjcounsel.com/theme/beesflow/img/favicon.ico" />-->
+<!--      <script type="text/javascript">-->
 
-<link rel="stylesheet" href="css/ass.css" />
-<link rel="stylesheet" href="css/bss.css" />
-<link rel="stylesheet" href="css/css.css" />
-<link rel="stylesheet" href="css/dss.css" />
-<!--[if lte IE 8]>
-<--<script src="js/as.js"></script>-->
-<![endif]-->
 
-<script>
-// 자바스크립트에서 사용하는 전역변수 선언
-var g5_url       = "http://www.sjcounsel.com";
-var g5_bbs_url   = "http://www.sjcounsel.com/bbs";
-var g5_is_member = "";
-var g5_is_admin  = "";
-var g5_is_mobile = "";
-var g5_bo_table  = "";
-var g5_sca       = "";
-var g5_editor    = "";
-var g5_cookie_domain = "";
-var g5_theme_shop_url = "http://www.sjcounsel.com/theme/beesflow/shop";
-var g5_shop_url = "http://www.sjcounsel.com/shop";
 
-</script>
+<!--    </script>-->
+   <style>
+      section {
+      display:grid;
+      gap:20px;
+      grid-template-columns:repeat(9,1fr);
+    }
+    h3 {
+    width: 1000px;
+    display:inline;
+    }
+    </style>
 
-<script src="http://www.sjcounsel.com/js/jquery-1.12.4.min.js"></script>
-<script src="http://www.sjcounsel.com/js/jquery-migrate-1.4.1.min.js"></script>
-<!--
--->
-
-<script src="http://www.sjcounsel.com/js/jquery.menu.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/js/common.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/js/wrest.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/js/placeholders.min.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/theme/beesflow/js/utility.js?ver=20211022150616"></script>
-
-<link rel="stylesheet" href="http://www.sjcounsel.com/js/font-awesome/css/font-awesome.min.css?ver=20211022150616" />
-
-<script src="http://www.sjcounsel.com/theme/beesflow/js/analysis_map.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/js/jquery.bxslider.min.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/theme/beesflow/js/jquery.fittext.js?ver=20211022150616"></script>
-<script src="http://www.sjcounsel.com/theme/beesflow/js/slick.min.js?ver=20211022150616"></script>
-<script src="https://d3js.org/d3.v4.min.js?ver=20211022150616"></script>
-<script src="https://d3js.org/topojson.v1.min.js?ver=20211022150616"></script>
 </head>
-<body>
-<div class="icon_loading" id="icon_loading"><img src="http://www.sjcounsel.com/theme/beesflow/img/loading.gif" /></div>
+    <body>
+    <div id="wrap" style="width:1280px">
+    <header>
+    <div id="headerBox">
+	            	<div id="logoBox"><a href="/"><img src="../static/img/logo2.png" id="logoImg"></a></div>
 
-<!-- 상단 시작 { -->
-<div id="hd">
+            	</div>
+            </header>
+            <nav>
+            	<div id="mainMenuBox">
+                	<ul id="menuItem">
+                    	<li><a href="/sell">팔아볼까</a></li>
+                    	<li><a href="/buy">사볼까</a></li>
+                        <li><a href="#">가격동향</a></li>
+                        <li><a href="#">HotTopic</a></li>
 
-
-
-<!-- 팝업레이어 -->
-
-<script>
-$(function() {
-    $(".hd_pops_reject").click(function() {
-        var id = $(this).attr('class').split(' ');
-        var ck_name = id[1];
-        var exp_time = parseInt(id[2]);
-        $("#"+id[1]).css("display", "none");
-        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
-    });
-    $('.hd_pops_close').click(function() {
-        var idb = $(this).attr('class').split(' ');
-        $('#'+idb[1]).css('display','none');
-    });
-    $("#hd").css("z-index", 1000);
-});
-</script>
-<!-- } 팝업레이어 끝 -->
-    <div id="hd_wrapper">
-        <div>
-            <div id="logo">
-                <a href="asd.html"><img src="img/banner-removebg-preview.png" id="logoImg"></a>
-            </div>
-
-
-
-            <nav id="gnb">
-                <h2>메인메뉴</h2>
-                <div class="gnb_wrap">
-                    <ul id="gnb_1dul">
-                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:999">
-                            <a href="sell" target="_self" class="gnb_1da">팔아볼까</a>
-                        </li>
-
-                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:998">
-                            <a href="buy" target="_self" class="gnb_1da">사볼까</a>
-                        </li>
-
-                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:997">
-                            <a href="/analysis.php" target="_self" class="gnb_1da">가격동향</a>
-                        </li>
-
-                        <li class="gnb_1dli gnb_al_li_plus" style="z-index:996">
-                            <a href="/news_notice" target="_self" class="gnb_1da">Hot Topic</a>
-                        </li>
                     </ul>
-                </div>
-
-
-
+                </div> <!-- mainMenuBox 끝 -->
 
             </nav>
+
+
     </div>
-    </div>
-</div>
+
 
 <form action="/searchpage" method="get">
+    <div id="searchBox" style="width:1280px">
+        <form action="/" style='display:inline'>
 <select id="select1" name = "brand" >
+
         <option value = "현대" >현대</option>
     <option value = "기아">기아</option>
     <option value = "벤츠">벤츠</option>
@@ -180,7 +122,7 @@ $(function() {
     <option value = "알파로메오">알파로메오</option>
     <option value = "오펠">오펠</option>
        </select>
-<select id="select2" name="name" style="width:120px">
+<select id="select2" name="name">
     <option value = "그랜저">그랜저</option>
     <option value = "쏘나타">쏘나타</option>
     <option value = "아반떼">아반떼</option>
@@ -223,14 +165,39 @@ $(function() {
     <option value = "프레스토">프레스토</option>
 
 </select>
-    <button>Search</button>
-    <div>
-        <input type="radio" id = 'Encar' name="site" value="Encar" checked>
-        <label for="Encar" style="color:black">Encar</label>
-    <input type="radio" id="Kcar" name="site" value="Kcar">
-        <label for="Kcar" style="color:black">Kcar</label>
-</div>
-    </form>
+<button >검색</button></form>
+        <form action="/buy" method="get" style="display:inline">
+            <button >뒤로</button></form>
+    </div>
+    <div style="width:1280px">
+    <h3 >{{bra}}의 {{na}} 차량 검색 결과는 다음과 같습니다.</h3>
+        </div>
+<section style="width:1280px">
+    <h4>Brand</h4>
+    <h4>Name</h4>
+    <h4>Model</h4>
+    <h4>Fuel</h4>
+    <h4>Mile</h4>
+    <h4>Year</h4>
+    <h4>Location</h4>
+    <h4>Price</h4>
+    <h4>Link</h4>
 
-</body>
+
+    {%for en in s%}
+
+    <span>{{en.brand}}</span>
+    <span>{{en.name}}</span>
+    <span>{{en.info}}</span>
+    <span>{{en.type}}</span>
+    <span>{{en.km}}</span>
+    <span>{{en.year}}</span>
+    <span>{{en.location}}</span>
+    <span>{{en.price}}</span>
+    <a href="{{en.link}}" target="_blank">BUY LINK</a>
+
+    {%endfor%}
+
+</section>
+    </body>
 </html>

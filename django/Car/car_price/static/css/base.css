@@ -120,10 +120,10 @@ transition:all 0.3s ease-out;
 /*여기서 상단 로고 고쳐봅시다*/
 #logo {
     position:absolute;
-    background: black;
+    background: white;
     top:10px;
     left:50px;
-    width:300px;
+    width:140px;
     height:200px;
     z-index:999;
 }

@@ -1,10 +1,24 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>homepage</title>
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-      <script type="text/javascript">
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/menu.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/slideShow.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/tabMenu.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/product.css">
+		<script src="../static/js/jquery-3.5.1.min.js"></script>
+		<script src="../static/js/subMenu.js"></script>
+		<script src="../static/js/slideShow.js"></script>
+		<script src="../static/js/tabMenu.js"></script>
+		<script src="../static/js/index.js"></script>
+		<script type="text/javascript"></script>
+    <script type="text/javascript">
 
         $(function() {
     $('#select1').change(function() {
@@ -171,14 +185,30 @@ for(var count = 0; count < changeItem.length; count++){
 
 </head>
 <body>
-<header>
-    <div id="headerBox">
-        <div id="logoBox"><a href="/"><img src="static/img/banner-removebg-preview.png" width="100%" height="200px"></a></div>
-        <div id="topMenuBox">살때 팔때</div>
+<div id="wrap">
+        	<header>
+        		<div id="headerBox">
+	            	<div id="logoBox"><a href="/"><img src="../static/img/logo2.png" id="logoImg"></a></div>
 
-    </div>
-</header>
+            	</div>
+            </header>
+            <nav>
+            	<div id="mainMenuBox">
+                	<ul id="menuItem">
+                    	<li><a href="/sell">팔아볼까</a></li>
+                    	<li><a href="/buy">사볼까</a></li>
+                        <li><a href="#">가격동향</a></li>
+                        <li><a href="#">HotTopic</a></li>
 
+                    </ul>
+                </div> <!-- mainMenuBox 끝 -->
+
+            </nav>
+
+
+        </div> <!-- wrap 끝 -->
+
+<div id="searchbox" style="background-color:red; height:100px; width:1280px">
 <form action="/searchpage" method="get">
 <select id="select1" name = "brand" >
         <option value = "현대" >현대</option>
@@ -290,7 +320,7 @@ for(var count = 0; count < changeItem.length; count++){
 </div>
     </form>
 
-
+</div>
 
 
 </body>
