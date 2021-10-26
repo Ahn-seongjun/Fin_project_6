@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Encar,Kcar
+# from .models import Encar,Kcar
 from django.db.models import Min
 def main(request):
     return render(request,'day_car.html')
@@ -29,21 +29,22 @@ def search(request):
     loc = request.GET.get("loc", "")
     price = request.GET.get("price","")
     sort = request.GET.get("sort","")
-    if sort == "km":
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')
-        obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')[0:1]
-        obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
-        obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
-    elif sort == "year":
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('year')
-        obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[0:1]
-        obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
-        obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
-    else:
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('price')
-        obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[0:1]
-        obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
-        obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
-    return render(request, 'search.html',{'info':info,'name':na,'brand':bra,'obj2':obj2,'obj1':obj1,'obj3':obj1})
+    # if sort == "km":
+    # info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')
+    # obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')[0:1]
+    # obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
+    # obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
+    # elif sort == "year":
+    #     info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('year')
+    #     obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[0:1]
+    #     obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
+    #     obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
+    # else:
+    #     info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('price')
+    #     obj1 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[0:1]
+    #     obj2 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[1:2]
+    #     obj3 = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel,location=loc, price__lte=price).order_by('km')[2:3]
+    return render(request, 'search.html')
+    # , {'info': info, 'name': na, 'brand': bra, 'obj2': obj2, 'obj1': obj1, 'obj3': obj1
 
 # Create your views here.
