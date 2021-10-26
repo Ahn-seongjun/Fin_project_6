@@ -16,6 +16,8 @@
     align-items: center;
     z-index: 9;
     transform: translate(-50%, 0%);
+    animation: fadein 2s;
+
 }
 
 h2.title {
@@ -43,10 +45,19 @@ select.selectpicker {
     color:black;
 }
 
-div.search_btn{
-    left:500px;
-    width:100px;
-    height:50px;
-    background:pink;
-    text-align:right;
+input.button {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    font-family:fantasy;
+    font-weight:bold;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
