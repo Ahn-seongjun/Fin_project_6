@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Encar,Kcar
+# from .models import Encar,Kcar
 def main(request):
     return render(request,'day_car.html')
 
@@ -28,12 +28,12 @@ def search(request):
     loc = request.GET.get("loc", "")
     price = request.GET.get("price","")
     sort = request.GET.get("sort","")
-    if sort == "km":
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')
-    elif sort == "year":
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('year')
-    else:
-        info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('price')
-    return render(request, 'search.html',{'info':info,'name':na,'brand':bra})
+    # if sort == "km":
+    #     info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('km')
+    # elif sort == "year":
+    #     info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('year')
+    # else:
+    #     info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year, km__lte=mile, type=fuel, location=loc,price__lte=price).order_by('price')
+    return render(request, 'search.html',{'name':na,'brand':bra})
 
 # Create your views here.
