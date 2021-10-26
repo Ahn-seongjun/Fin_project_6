@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+#sell_box {
+    position: absolute;
+    background: gray;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    width: 1300px;
+    height: 200px;
+    padding: 50px;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    transform: translate(-50%, 0%);
+}
+
+
+h2.title {
+    margin:10px;
+    width:200px;
+    text-align:left;
+}
+
+select.selectpicker {
+    width:130px;
+    height:50px;
+
+}
+
+#select_wrap {
+  margin: auto;
+  padding: 20px 0;
+  width: 1300px;
+}
+
+#km {
+    width:130px;
+    height:45px;
+    font-size:13px;
+    color:black;
+}
+
+div.search_btn{
+    left:500px;
+    width:100px;
+    height:50px;
+    background:pink;
+    text-align:right;
+}
