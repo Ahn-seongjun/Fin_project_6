@@ -1,0 +1,134 @@
+@charset "utf-8";
+/*바디 설정*/
+body {
+    padding: 20px;
+margin:0;
+}
+/*밑 바탕 설정*/
+#hd_wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    margin:0;
+    padding:0;
+    border-bottom:1px solid rgba(255, 255, 255, .3);
+}
+
+.main_background{
+    margin:auto;
+    width:100%;
+    height:800px;
+    overflow:hidden;
+}
+#top {
+    position:relative;
+    margin:0 auto;
+    font-size:0;
+    line-height:1;
+    text-align:center;
+}
+
+#top #logo {
+    display:inline-block;
+    position:absolute;
+    top: 40px;
+    font-size:0;
+    line-height:1;
+    vertical-align:middle;
+}
+
+#top #top_menu {
+    display:inline-block;
+    position:relative;
+    font-size:0;
+    line-height:1;
+    text-align:center;
+    vertical-align:middle;
+    z-index:3;
+}
+
+#top .top_menu_factor {
+    display:inline-block;
+    position:relative;
+    line-height:1;
+    padding:0 25px;
+    font-size:20px;
+     z-index:0;
+}
+/*메뉴 색바뀌는 것*/
+.menu_url {
+    display:block;
+    position:relative;
+    padding:30px 14px;
+    color:white;
+    text-decoration:none;
+    -webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+a.menu_url:hover {
+    color:gray;
+    -webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+.top_wrap {
+    height:100px;
+     z-index:1;
+}
+
+#logoImg{
+    position: absolute;
+    top: -60px;
+    left: 50px;
+    max-width:130px;
+     z-index:9999;
+}
+
+#logo {
+        top:-100px;
+        left:0px;
+        width:180px;
+        height:140px;
+     z-index:2;
+    }
+
+#bgcar {
+    display:block;
+    margin:auto;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    text-align:center;
+    z-index:30;
+
+}
+
+#describe {
+    position:absolute;
+    top:200px;
+    left:100px;
+    width:550px;
+    height:500px;
+    padding:4px;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@font-face {
+    text-align:center;
+    font-size:50px;
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-style: normal;
+}
