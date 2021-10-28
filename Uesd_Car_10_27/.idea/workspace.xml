@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="865695db-c325-4c0a-94b5-80c8cd3245fd" name="Default Changelist" comment="" />
+    <list default="true" id="f763302d-57a6-4c04-adfa-b863e02b4e86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car/Car/car_price/static/buy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car/Car/car_price/static/main/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car/Car/car_price/static/sell/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car_10_26/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car_10_26/Car/car_price/sell/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car_10_26/Car/car_price/static/buy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Uesd_Car_10_26/Car/car_price/static/main/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/car_price/sell/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/car_price/static/buy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/car_price/static/main/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1zxDwMX0Q8PynczzGx1pNYQW4PT" />
+  <component name="ProjectId" id="208L2xwlpQUJHFfgjDfEwANh9z5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,58 +32,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/새 폴더 (5)/Uesd_Car_10_27" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car_10_26\Car\car_price\static\sell\js" />
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car_10_26\Car\car_price\static\sell\css" />
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car_10_26\Car\car_price\templates" />
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car_10_26\Car" />
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car\Car\car_price\templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car\Car\car_price\static" />
-      <recent name="C:\Users\y267m\Desktop\새 폴더 (5)\Uesd_Car\Car\car_price" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="중고차" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Car/car_price" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Car/car_price/functions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.functions" />
-      </list>
-    </recent_temporary>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DJango/Cafe_Django" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="865695db-c325-4c0a-94b5-80c8cd3245fd" name="Default Changelist" comment="" />
-      <created>1635081083124</created>
+      <changelist id="f763302d-57a6-4c04-adfa-b863e02b4e86" name="Default Changelist" comment="" />
+      <created>1635421064478</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1635081083124</updated>
+      <updated>1635421064478</updated>
     </task>
     <servers />
   </component>
