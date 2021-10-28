@@ -1,17 +1,18 @@
 from django.shortcuts import render
-from .models import Encar,Kcar,Search
+# from .models import Encar,Kcar,Search
 from django.db.models import Min,Count
 import pandas as pd
 from .functions import to_db,to_csv
 
 import pymysql
 def main(request):
-    info = Search.objects.values("brand").annotate(Count('brand')).order_by("brand")
-    first = info[0:1]
-    second = info[1:2]
-    third = info[2:3]
+    # info = Search.objects.values("brand").annotate(Count('brand')).order_by("brand")
+    # first = info[0:1]
+    # second = info[1:2]
+    # third = info[2:3]
     # print(info)
-    return render(request,'day_car.html',{'info':info,'first':first,'second':second,'third':third})
+    return render(request,'day_car.html')
+# ,{'info':info,'first':first,'second':second,'third':third}
 
 def sell(request):
     return render(request,'wannabesell.html')
@@ -43,15 +44,16 @@ def search(request):
     loc = request.GET.get("loc", "")
     price = request.GET.get("price","")
     sort = request.GET.get("sort","")
-    to_db('1',bra,na)
-    info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,year__lte=year1,km__gte=mile,km__lte=mile1, type=fuel, location=loc,price__lte=price).order_by('price')
-    obj1 = info[0:1]
-    obj2 = info[1:2]
-    obj3 = info[2:3]
-    if not info:
-        return render(request, 'search1.html',{'info': info, 'name': na, 'brand': bra, 'obj2': obj2, 'obj1': obj1, 'obj3': obj3})
-    else:
-        return render(request, 'search.html',{'info': info, 'name': na, 'brand': bra, 'obj2': obj2, 'obj1': obj1, 'obj3': obj3})
+    # to_db('1',bra,na)
+    # info = Encar.objects.filter(brand=bra, name__icontains=na, year__gte=year,year__lte=year1,km__gte=mile,km__lte=mile1, type=fuel, location=loc,price__lte=price).order_by('price')
+    # obj1 = info[0:1]
+    # obj2 = info[1:2]
+    # obj3 = info[2:3]
+    # if not info:
+    #     return render(request, 'search1.html',{'info': info, 'name': na, 'brand': bra, 'obj2': obj2, 'obj1': obj1, 'obj3': obj3})
+    # else:
+    #     return render(request, 'search.html',{'info': info, 'name': na, 'brand': bra, 'obj2': obj2, 'obj1': obj1, 'obj3': obj3})
+    return render(request, 'search.html')
 
 
 # Create your views here.
