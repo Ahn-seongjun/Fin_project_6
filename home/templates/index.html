@@ -27,7 +27,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-
+    <script src="{% static 'home/js/select.js' %}"></script>
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -137,40 +137,94 @@
                 </div>
                 <div class="row">
                   <div class="form-group col-md-3">
-                    <label for="cf-1">제조사</label>
-                    <input type="text" id="cf-1" placeholder="Your pickup address" class="form-control">
+                    <label >제조사</label>
+                       <select class="selectpicker" name='brand' onchange="categoryChange(this)">
+                            <option value="none" >제조사</option>
+                            <option value = "현대" >현대</option>
+                            <option value = "기아">기아</option>
+                            <option value = "벤츠">벤츠</option>
+                            <option value = "BMW">BMW</option>
+                            <option value = "쉐보레">쉐보레</option>
+                            <option value = "르노삼성">르노삼성</option>
+                            <option value = "쌍용">쌍용</option>
+                            <option value = "아우디">아우디</option>
+                            <option value = "제네시스">제네시스</option>
+                            <option value = "미니">미니</option>
+                            <option value = "랜드로버">랜드로버</option>
+                            <option value = "포드">포드</option>
+                            <option value = "지프">지프</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-2">모델</label>
-                    <input type="text" id="cf-2" placeholder="Your drop-off address" class="form-control">
+                   <select id="model" class="selectpicker" name="name">
+                            <option value="none">모델</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-3">옵션</label>
-                    <input type="text" id="cf-3" placeholder="Your pickup address" class="form-control datepicker px-3">
+                        <select id="trim" class="selectpicker" name="trim">
+                            <option value="none">등급</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-4">연료</label>
-                    <input type="text" id="cf-4" placeholder="Your pickup address" class="form-control datepicker px-3">
+                    <select class="selectpicker" name="fuel">
+                        <option value = "none">연료</option>
+                        <option value = "휘발유">가솔린</option>
+                        <option value = "경유">디젤</option>
+                        <option value = "하이브리드">하이브리드</option>
+                        <option value = "바이퓨엘">바이퓨엘</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-5">마일</label>
-                    <input type="text" id="cf-5" placeholder="Your pickup address" class="form-control datepicker px-3">
+                        <select class="selectpicker" name="year">
+                        <option  value = "none">연식</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-6">구동방식</label>
-                    <input type="text" id="cf-6" placeholder="Your pickup address" class="form-control datepicker px-3">
+                               <select class="selectpicker" name="accident">
+                        <option value = "none">사고여부</option>
+                        <option value=3>무사고</option>
+                        <option value=2>단순교체</option>
+                        <option value=1>접촉사고</option>
+                        <option value=0>사고</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-7">연식</label>
-                    <input type="text" id="cf-7" placeholder="Your pickup address" class="form-control datepicker px-3">
+                       <select class="selectpicker" name="color">
+                        <option value = "none">색상</option>
+                        <option>흰색</option>
+                        <option>검정색</option>
+                        <option>회색</option>
+                        <option>기타</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-8">사고여부</label>
-                    <input type="text" id="cf-8" placeholder="Your pickup address" class="form-control datepicker px-3">
+                           <select class="selectpicker" name="wd">
+                        <option value = "none">구동방식</option>
+                        <option value = 0>전륜구동</option>
+                        <option value = 0>후륜구동</option>
+                        <option value = 1>사륜구동</option>
+                        </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="cf-9">색상</label>
-                    <input type="text" id="cf-9" placeholder="Your pickup address" class="form-control datepicker px-3">
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="km" name="km" maxlength=8 placeholder="주행거리" />
                   </div>
                 </div>
                 <div class="row">
