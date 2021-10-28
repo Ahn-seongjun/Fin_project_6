@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="http://www.sjcounsel.com/theme/beesflow/js/slick.css" />
 <link rel="icon" href="http://www.sjcounsel.com/theme/beesflow/img/favicon.ico" />-->
 
-
+<link rel="shortcut icon" href="../static/sell/img/car-solid.svg" />
 <link rel="stylesheet" href="../static/buy/css/topmenu.css" />
 <!--<link rel="stylesheet" href="../static/buy/css/size.css" />-->
 <link rel="stylesheet" href="../static/buy/css/sellopt.css" />
@@ -59,10 +59,31 @@
         </div>
     </div>
     <!--  상단 끝 -->
-
-
-
-                            <!-- 메인 -->
+<!--<div id="sell_box1"><h1 style="margin-top:-13%">Best</h1>-->
+<!--    {%for i in obj1%}-->
+<!--    <div>{{i.name}}</div>-->
+<!--    <div style="margin-top:15px">{{i.km}}Km</div>-->
+<!--    <div style="margin-top:15px">₩{{i.price}}원</div>-->
+<!--    <div style="margin-top:15px"><a href="{{i.link}}">구매Link</a></div>-->
+<!--    {%endfor%}-->
+<!--</div>-->
+<!--<div id="sell_box2"><h1 style="margin-top:-13%">Best</h1>-->
+<!--    {%for i in obj2%}-->
+<!--    <div>{{i.name}}</div>-->
+<!--    <div style="margin-top:15px">{{i.km}}Km</div>-->
+<!--    <div style="margin-top:15px">₩{{i.price}}원</div>-->
+<!--    <div style="margin-top:15px"><a href="{{i.link}}">구매Link</a></div>-->
+<!--    {%endfor%}-->
+<!--</div>-->
+<!--<div id="sell_box3"><h1 style="margin-top:-13%">Best</h1>-->
+<!--    {%for i in obj3%}-->
+<!--    <div style="margin-top:15px">{{i.name}}</div>-->
+<!--    <div style="margin-top:15px">{{i.km}}Km</div>-->
+<!--    <div style="margin-top:15px">₩{{i.price}}원</div>-->
+<!--    <div style="margin-top:15px"><a href="{{i.link}}">구매Link</a></div>-->
+<!--    {%endfor%}-->
+<!--</div>-->
+              <!-- 메인 -->
             <div class="main_background" >
             <img src="../static/buy/img/중고차매장.jpg" id="bgcar">
             </div>
@@ -71,7 +92,7 @@
 
                 <table style="width:1280px;margin-left:auto;margin-right:auto;">
                 <thead>
-                <h2 style="margin-left:300px">brand의 name차량 검색 결과</h2>
+<!--                <h2 style="margin-left:120px">{{brand}}의 {{name}}차량 검색 결과</h2>-->
 
                 <tr>
 
@@ -89,18 +110,18 @@
                         </thead>
                     <tbody>
 
-                        <tr>
+<!--                        <tr>-->
 <!--                            {%for en in info%}-->
-                        <td>brand</td>
-                        <td>name</td>
-                        <td>info</td>
-                        <td>type</td>
-                        <td>km</td>
-                        <td>year</td>
-                        <td>location</td>
-                        <td>price</td>
-                        <td><a href="#" target="_blank">BUY LINK</a></td>
-                    </tr>
+<!--                        <td>{{en.brand}}</td>-->
+<!--                        <td>{{en.name}}</td>-->
+<!--                        <td>{{en.info}}</td>-->
+<!--                        <td>{{en.type}}</td>-->
+<!--                        <td>{{en.km}}</td>-->
+<!--                        <td>{{en.year}}</td>-->
+<!--                        <td>{{en.location}}</td>-->
+<!--                        <td>{{en.price}}</td>-->
+<!--                        <td><a href="{{en.link}}" target="_blank">BUY LINK</a></td>-->
+<!--                    </tr>-->
 
 <!--                {%endfor%}-->
 
@@ -218,14 +239,14 @@
 																<option value = "프레스토">프레스토</option>
 															</select>
 
-                                  	   <select  id="select3" name="fuel">
-                       <option value="" disabled selected hidden>연료</option>
+                                            <select  id="select3" name="fuel">
+                                            <option value="" disabled selected hidden>연료</option>
 															<option value = "가솔린">가솔린</option>
 															<option value = "디젤">디젤</option>
 															<option value = "LPG">LPG</option>
 															<option value = "가솔린+전기">하이브리드</option>
 														</select>
- <select  id="select9" name="loc">
+                                            <select  id="select9" name="loc">
                                                                  <option value="" disabled selected hidden>지역</option>
 															<option value = "서울">서울</option>
 															<option value = "경기/인천">경기/인천</option>

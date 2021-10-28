@@ -31,5 +31,5 @@ from django.db import models
 #     class Meta:
 #         managed = False
 #         db_table = 'kcar'
-#
-# # Create your models here.
+
+# Create your models here.
