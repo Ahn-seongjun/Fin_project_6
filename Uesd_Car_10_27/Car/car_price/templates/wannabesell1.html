@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<title>Day-Car</title>
+ 
+
+<link rel="shortcut icon" href="../static/sell/img/car-solid.svg" />
+
+
+<link rel="stylesheet" href="../static/sell/css/topmenu.css" />
+
+<link rel="stylesheet" href="../static/sell/css/sellopt.css" />
+
+<script src="../static/sell/js/jquery-3.5.1.min.js"></script>
+<script src="../static/sell/js/topmenu.js"></script>
+<script src="../static/sell/js/select.js"></script>
+<script type="text/javascript" src="../static/sell/js/button_ex.js"></script>
+</head>
+<body>
+
+<!-- 상단 시작  -->
+
+    <div id="hd">
+        <div id="hd_wrapper">
+                <nav id="top">
+                    <div class="top_wrap">
+                        <div id="logo">
+                            <a href="/"><img src="../static/sell/img/logo.png" id="logoImg"></a>
+                        </div>
+                        <ul id="top_menu">
+                            <li class="top_menu_factor" style="z-index:999">
+                                <a href="/sell" target="_self" class="menu_url">팔아볼까</a>
+                            </li>
+
+                            <li class="top_menu_factor" style="z-index:998">
+                                <a href="/buy" target="_self" class="menu_url">사볼까</a>
+                            </li>
+
+                            <li class="top_menu_factor" style="z-index:997">
+                                <a href="" target="_self" class="menu_url">가격동향</a>
+                            </li>
+
+                            <li class="top_menu_factor" style="z-index:996">
+                                <a href="" target="_self" class="menu_url">Hot Topic</a>
+                            </li>
+
+                            <li class="top_menu_factor" style="z-index:996">
+                                <a href="" target="_self" class="menu_url">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+    </div>
+    <!--  상단 끝 -->
+
+
+                            <!-- 메인 -->
+            <div class="main_background">
+                <img src="../static/sell/img/중고차매장.jpg" id="bgcar">
+                <div id="sell_box">
+                    <h2 class="title">
+                        옵션을 적어줘!
+                    </h2>
+                    <form action="/sell1" method="get">
+
+                    <div id="select_wrap">
+                        <select class="selectpicker" name='brand' onchange="categoryChange(this)">
+                            <option value="none" >제조사</option>
+                            <option value = "현대" >현대</option>
+                            <option value = "기아">기아</option>
+                            <option value = "벤츠">벤츠</option>
+                            <option value = "BMW">BMW</option>
+                            <option value = "쉐보레">쉐보레</option>
+                            <option value = "르노삼성">르노삼성</option>
+                            <option value = "쌍용">쌍용</option>
+                            <option value = "아우디">아우디</option>
+                            <option value = "제네시스">제네시스</option>
+                            <option value = "미니">미니</option>
+                            <option value = "랜드로버">랜드로버</option>
+                            <option value = "포드">포드</option>
+                            <option value = "지프">지프</option>
+                        </select>
+
+                        <select id="model" class="selectpicker" name="name">
+                            <option value="none">모델</option>
+                        </select>
+
+                        <select id="trim" class="selectpicker" name="trim">
+                            <option value="none">등급</option>
+                        </select>
+
+                        <select class="selectpicker" name="fuel">
+                        <option value = "none">연료</option>
+                        <option value = "휘발유">가솔린</option>
+                        <option value = "경유">디젤</option>
+                        <option value = "하이브리드">하이브리드</option>
+                        <option value = "바이퓨엘">바이퓨엘</option>
+                        </select>
+
+
+                        <select class="selectpicker" name="year">
+                        <option  value = "none">연식</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        </select>
+
+                        <select class="selectpicker" name="accident">
+                        <option value = "none">사고여부</option>
+                        <option>무사고</option>
+                        <option>단순교체</option>
+                        <option>접촉사고</option>
+                        <option>사고</option>
+                        </select>
+
+                       <select class="selectpicker" name="color">
+                        <option value = "none">색상</option>
+                        <option>흰색</option>
+                        <option>검정색</option>
+                        <option>회색</option>
+                        <option>기타</option>
+                        </select>
+
+                        <select class="selectpicker" name="wd">
+                        <option value = "none">구동방식</option>
+                        <option value = "2WD">전륜구동</option>
+                        <option value = "2WD">후륜구동</option>
+                        <option value = "4WD">사륜구동</option>
+                        </select>
+
+                        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="km" maxlength=8 placeholder="주행거리" />
+                        <br>
+                    </div>
+                        <br><br><br><br>
+                        <input type="submit" id = 'showbtn' class="button" value="얼마야?">
+                               </form>
+                </div>
+
+<div class = "col-md-5" id = "noneDiv" style=" display:none;" >
+                    <span>해당 차량과 동일한 모델은 000대 있습니다.</span>
+                </div>
+            </div>
+
+</body>
+</html>
