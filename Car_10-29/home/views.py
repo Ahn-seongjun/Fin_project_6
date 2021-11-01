@@ -60,7 +60,7 @@ def sell(request):
     km = request.GET.get("km", "")
     trim1 = get_trim(bra,trim)
     a = to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
-    # print()
+
     model = joblib.load('home/model/XGBoost_1.pkl')
     price = model.predict(a)
-    return render(request,'sell.html',{'price':price})
+    return render(request,'sell.html')
