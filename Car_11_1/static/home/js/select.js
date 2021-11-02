@@ -11,7 +11,7 @@ function categoryChange(e) {
     var mini = ['쿠퍼', '로드스터', '원', '로버 미니'];
     var land = ['레인지로버', '디스커버리', '프리랜더', '디펜더'];
     var ford = ['익스플로러', '머스탱', '토러스', 'F150', '몬데오', '포커스', '이스케이프', '퓨전', 'E-Series', 'F350', '쿠가', '익스페디션', '레인저', '파이브', 'S-MAX', '트랜짓'];
-    var jeep = ['체로키', '랭글러', '컴패스', '레니게이드', '글래디에이터', '커맨더'];
+    var volks = ['티구안', '골프', '폴로', 'GT', '투아렉 블루모션', '아테온', '파사트', '페이톤', '제타','골프 블루모션', '뉴 CC 블루모션', '비틀', 'CC', '제타 블루모션', '뉴 CC', '시로코', '티록','투아렉', 'CC 블루모션'];
 
 	var target = document.getElementById("model");
 
@@ -27,7 +27,7 @@ function categoryChange(e) {
 	else if(e.value == "미니") var d = mini;
 	else if(e.value == "랜드로버") var d = land;
 	else if(e.value == "포드") var d = ford;
-	else if(e.value == "지프") var d = jeep;
+	else if(e.value == "폭스바겐") var d = volks;
 	target.options.length = 0;
 
 	for (x in d) {
@@ -66,7 +66,7 @@ function categoryChange(e) {
     var mini_t = ['STANDARD','MID','HIGH'];
     var land_t = ['스탠다드', '다이나믹', '프리스테지'];
     var ford_t = ['스탠다드', '리미티드'];
-    var jeep_t = ['스탠다드', '리미티드'];
+    var volks_t = ['기본','컴포트','프리미엄','프레스티지'];
     var chevolet_t = ['코치','SE','팝','LS','LS','디럭스','5.3','SS 3.6 V8','익스트림',
                     '판넬밴','SX','X','재즈','LT','SLT','밴','패션','6','SS 6.2 V8','다이나믹레드','어드벤처패키지','익스트림-X','익스트림-X스포츠바',
                     'CDX','그루브','LTZ','RS','다이나믹','Z71-X','LTZ+','ACTIV',
@@ -85,7 +85,7 @@ function categoryChange(e) {
 	else if(e.value == "랜드로버") var d = land_t;
 	else if(e.value == "쉐보레") var d = chevolet_t;
 	else if(e.value == "포드") var d = ford_t;
-	else if(e.value == "지프") var d = jeep_t;
+	else if(e.value == "폭스바겐") var d = volks_t;
 
 
 	target_t.options.length = 0;

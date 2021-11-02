@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import datetime
 from django.http import HttpResponse,JsonResponse
-from .models import Test
+# from .models import Test
 from django.db.models import Min,Count
 from .functions import to_db,to_csv,get_trim
 import joblib
@@ -66,8 +66,8 @@ def sell(request):
     wd = request.GET.get("wd", "")
     km = request.GET.get("km", "")
     trim1 = get_trim(bra,trim)
-    to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
-    # print()
-    # model = joblib.load('home/model/XGBoost_1.pkl')
-    # price = model.predict(a)
-    return render(request,'sell.html')
+    a= to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
+
+    model = joblib.load('home/model/XGBoost.pkl')
+    price = model.predict(a)
+    return render(request,'sell.html',{'price':price})

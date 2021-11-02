@@ -74,11 +74,15 @@ def get_trim(brand,trim):
             trim = 2
         else:
             trim = 3
-    elif brand == '지프':
-        if trim == '스탠다드':
+    elif brand == '폭스바겐':
+        if trim == '기본':
             trim = 1
+        elif trim == '컴포트':
+            trim = 2
+        elif trim == '프리미엄':
+            trim = 3
         else:
-            trim =2
+            trim =4
     elif brand == '벤츠':
         if trim == '기본':
             trim = 1
@@ -106,6 +110,15 @@ def get_trim(brand,trim):
         elif trim in ['스포츠 F40','럭셔리 G20','럭셔리 플러스 G30','M 스포츠 G30','M스포츠 G12','M 스포츠 G02',' M 스포츠 F48','M스포츠 G05','M 스포츠 G06','M 스포츠 G11','M 스포츠 F33','F12 F06','F02','M스포츠 F01','스포츠 라인 F32','솔 플러스', 'M스포츠 F32']:
             trim = 2
         elif trim in ['M 스포츠 G20','M 스포츠 플러스 G30','M 스포츠 G12','인디비주얼 F02','럭셔리 LP F36','럭셔리 플러스 F10']:
+            trim = 3
+        else:
+            trim = 4
+    elif brand == '아우디':
+        if trim in ['기본형', '엔트리', '스포트라인', '다이나믹']:
+            trim = 1
+        elif trim in ['프레스티지', '프리미엄', '리미티드']:
+            trim = 2
+        elif trim in ['S-LINE']:
             trim = 3
         else:
             trim = 4
@@ -181,9 +194,10 @@ def to_csv(bra,na,trim,fuel,year,acci,color,wd,km):
                         f'brand_{bra}':bra,
                         f'name_{na}':na,
                         f'type_{fuel}':fuel,
-                        f'color_{color}':color})
+                        f'color_{color}':color},
+                       index=[0])
     df=pd.concat([empty,df2])
     df.fillna(0,inplace=True)
     df.iloc[0:, 6:] = df.iloc[0:, 6:][df.iloc[0:, 6:] == 0].fillna(1)
     df.to_csv("test_data.csv",sep=',',na_rep='NaN',index=False)
-    # return df
+    return df
