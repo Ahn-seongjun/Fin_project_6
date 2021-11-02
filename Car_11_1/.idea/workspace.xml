@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28866395-d049-43dc-a5d9-018c6f798bd7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Car_11_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/my_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daycar/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datacode/encar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datacode/encar_for.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datacode/kcar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datacode/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/cars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/topics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/aos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap-datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/bootstrap/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/jquery.fancybox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/magnific-popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/mediaelementplayer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/backup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/Flaticon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/Flaticon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/Flaticon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/Flaticon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/Flaticon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/_flaticon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/flaticon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/font/flaticon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/flaticon/license/license.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/Read Me.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/demo-files/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/demo-files/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/fonts/icomoon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/fonts/icomoon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/fonts/icomoon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/fonts/icomoon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/selection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/fonts/icomoon/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/hero_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/hero_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/hero_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/img_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/person_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/person_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/person_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/person_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/person_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/images/post_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/aos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/bootstrap-datepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery-migrate-3.0.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.animateNumber.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.countdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.easing.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.fancybox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.magnific-popup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.stellar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/mediaelement-and-player.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/js/typed.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20LKFN6WVxXgjMwe75ApjFtZDc2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28866395-d049-43dc-a5d9-018c6f798bd7" name="Default Changelist" comment="" />
+      <created>1635818323900</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635818323900</updated>
+    </task>
+    <servers />
+  </component>
+</project>
