@@ -1,0 +1,32 @@
+
+body {
+  margin: 50;
+}
+
+.container {
+  height: 50vh;
+}
+
+.chart-wrapper {
+  width: 50px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+
+#wrapper {
+    position: relative;
+    background: gray;
+    border-radius: 5px;
+    top: 20%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    padding: 100px;
+    background-color: black;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    transform: translate(-50%, 0%);
