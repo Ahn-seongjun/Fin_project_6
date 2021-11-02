@@ -6,8 +6,9 @@ from django.db.models import Min,Count
 from .functions import to_db,to_csv,get_trim
 import joblib
 from django.core import serializers
-import simplejson as json
+# import simplejson as json
 from django.views.decorators.csrf import csrf_exempt
+# import xgboost
 # Create your views here.
 
 TEMPLATE_DIRS= (
@@ -66,8 +67,7 @@ def sell(request):
     wd = request.GET.get("wd", "")
     km = request.GET.get("km", "")
     trim1 = get_trim(bra,trim)
-    a= to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
-
-    model = joblib.load('home/model/XGBoost.pkl')
+    a = to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
+    model = joblib.load('XGBoost.pkl')
     price = model.predict(a)
-    return render(request,'sell.html',{'price':price})
+    return render(request,'sell.html')
