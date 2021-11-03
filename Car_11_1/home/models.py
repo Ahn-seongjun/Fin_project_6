@@ -44,13 +44,12 @@ class Warehouse1(models.Model):
 
 
 class Search(models.Model):
-
+    id = models.IntegerField(primary_key=True)
     brand = models.CharField(max_length=200, blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
 
     class Meta:
         managed = False
-
-
+        db_table = 'search'
 
 # Create your models here.

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import datetime
 from django.http import HttpResponse,JsonResponse
-from .models import Warehouse,Warehouse1
+from .models import Warehouse,Warehouse1,Search
 from django.db.models import Min,Count
 from .functions import to_db,to_csv,get_trim
 import joblib
@@ -18,8 +18,11 @@ TEMPLATE_DIRS= (
 def index(request):
     return render(request, "index.html",{})
 def buy_1(request):
-
-    return render(request, "buy_1.html")
+    # rank = Search.objects.values("name").annotate(Count('name')).order_by('name')
+    # first = rank[0:5]
+    # # second = rank[1:2]
+    # # third = rank[2:3]
+    return render(request, "buy_1.html",{})
 
 def buy_3(request):
 
@@ -38,15 +41,14 @@ def buy_2(request):
     loc = request.GET.get("loc", "")
     price = request.GET.get("price","")
     site = request.GET.get('chk',"")
-    to_db(bra,na)
-    info = Warehouse.objects.filter(brand=bra, name__icontains=na, year__gte=year, year__lte=year1, km__gte=mile,
-                                    km__lte=mile1, fuel=fuel, location=loc, price__lte=price).order_by('price')
-    info1 = Warehouse.objects.filter(brand=bra, name__icontains=na, year__gte=year, year__lte=year1, km__gte=mile,
-                                     km__lte=mile1, fuel=fuel, location=loc, price__lte=price).annotate(num=Count('brand'))
+    to_db(None,bra,na)
+
+    info = Warehouse.objects.filter(brand=bra, name__icontains=na, year__gte=year, year__lte=year1, km__gte=mile,km__lte=mile1, fuel=fuel, location=loc, price__lte=price).order_by('price')
+    info1 = Warehouse.objects.filter(brand=bra, name__icontains=na, year__gte=year, year__lte=year1, km__gte=mile,km__lte=mile1, fuel=fuel, location=loc, price__lte=price).annotate(num=Count('brand'))
 
     try:
         total = info1[0].num
-        return render(request, "buy_2.html", {'info': info, 'info1': info1,'bra': bra,'total':total})
+        return render(request, "buy_2.html", {'info': info, 'info1': info1,'total':total})
     except:
         return render(request,"buy3.html")
 
@@ -78,4 +80,6 @@ def sell(request):
     model = joblib.load('LinearRegression.pkl')
     price = model.predict(a)
     price = np.expm1(price)
-    return render(request,'sell.html',{'price':price})
+    for i in price:
+        num = round(int(i))
+    return render(request,'sell.html',{'price':num})

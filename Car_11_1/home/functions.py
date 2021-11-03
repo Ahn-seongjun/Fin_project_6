@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 
-def to_db(brand,name):
+def to_db(a,brand,name):
     car_db = pymysql.connect(
         user='root',
         passwd='0000',
@@ -10,8 +10,8 @@ def to_db(brand,name):
         charset='utf8'
     )
     cursor = car_db.cursor(pymysql.cursors.DictCursor)
-    insert_data=[{'brand':brand,'name':name}]
-    insert_sql2 = "INSERT INTO `search` VALUES (%(brand)s,%(name)s);"
+    insert_data=[{'id':a,'brand':brand,'name':name}]
+    insert_sql2 = "INSERT INTO `search` VALUES (%(id)s,%(brand)s,%(name)s);"
     cursor.executemany(insert_sql2, insert_data)
     car_db.commit()
 

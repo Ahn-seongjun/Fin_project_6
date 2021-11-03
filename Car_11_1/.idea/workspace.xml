@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b692c3e6-20d4-4c0d-8cfc-d4f045fc31f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Car_11_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Car_11_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/buy_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/buy_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/buy_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sell.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css/buystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css/buystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_data.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +34,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/home/images" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project3\Car_11_1\static\home\images" />
       <recent name="E:\Project3\Car_11_1\home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Project3\Car_11_1\home\templates" />
       <recent name="C:\Users\ahj93\Datascience\Fin_project\Car_11_1\home\model" />
     </key>
   </component>

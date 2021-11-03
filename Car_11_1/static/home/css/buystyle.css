@@ -1602,3 +1602,21 @@ h1, h2, h3, h4, h5,
     float:left;
 
 }
+
+#rank {
+    background-color:gray;
+    margin-left:400px;
+    width : 150px;
+    height: 200px;
+    margin-top : -400px;
+    opacity: 0.4;
+    animation: fadein 2s
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
