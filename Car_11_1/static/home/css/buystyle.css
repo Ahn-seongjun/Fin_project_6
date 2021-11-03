@@ -1,5 +1,4 @@
 /* Base */
-
 html {
   overflow-x: hidden; }
 
@@ -218,21 +217,6 @@ body {
 ::selection {
   background: #000;
   color: #fff; }
-
-#best {
-    color:white;
-    background-color:gray;
-    display:inline-block;
-    padding: 50px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top:200px;
-    margin-left:1000px;
-    position : absolute;
-
-
-}
 
 a {
   -webkit-transition: .3s all ease;
@@ -1216,9 +1200,9 @@ h1, h2, h3, h4, h5,
       width: 20px;
       background: #fff; }
 
-.footer-suscribe-form .form-control {
+.footer-suscribe-form .form-control .selectpicker{
   color: #000; }
-  .footer-suscribe-form .form-control:hover, .footer-suscribe-form .form-control:active, .footer-suscribe-form .form-control:focus {
+  .footer-suscribe-form .form-control .selectpicker:hover, .footer-suscribe-form .form-control .selectpicker:active, .footer-suscribe-form .form-control .selectpicker:focus {
     color: #000 !important; }
 
 .footer-suscribe-form .btn {
@@ -1262,11 +1246,11 @@ h1, h2, h3, h4, h5,
         font-weight: 700; }
         .ftco-cover-1.overlay p a:hover {
           text-decoration: none; }
-    .ftco-cover-1.overlay form .form-control,
+    .ftco-cover-1.overlay form .form-control ,
     .ftco-cover-1.overlay form .btn {
       height: 55px;
       border-radius: 4px; }
-    .ftco-cover-1.overlay form .form-control {
+    .ftco-cover-1.overlay form .form-control .selectpicker {
       padding-left: 20px;
       padding-right: 20px;
       border-color: transparent;
@@ -1595,3 +1579,26 @@ h1, h2, h3, h4, h5,
     flex: 0 0 50px;
     border-radius: 50%; }
 
+.selectpicker {
+  height: 55px;
+  background: #fff !important;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  .selectpicker:active, .selectpicker:focus {
+    border-color: #007bff; }
+  .selectpicker:hover, .selectpicker:active, .selectpicker:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+
+.selectpicker {
+  border: none;
+  border: 1px solid #e6e6e6; }
+  .selectpicker:hover, .selectpicker:active, .selectpicker:focus {
+    border: 1px solid #666666; }
+
+.form-group.col-md-3 {
+    height: 55px;
+}
+.form-group.col-md-3 > input{
+    float:left;
+
+}

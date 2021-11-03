@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/buystyle.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/buystyle.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">-->
     <script src="{% static 'home/js/select.js' %}"></script>
 
   </head>
@@ -83,11 +84,18 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="ftco-cover-1 overlay" style="background-image: url({% static 'home/images/hero_1.jpg' %});">
+
+        {% for i in info %}
+      <div class="ftco-cover-1 overlay" style="background-image: url({{i.photo}});">
+          {%endfor%}
+
         <div class="container">
+                 {%for i in first%}
+        <div id="best">{{i.price}}</div>
+        {%endfor%}
           <div class="row align-items-center">
-              <div class="col-lg-5">
-                  <div class="feature-car-rent-box-1">
+            <div class="col-lg-5">
+              <div class="feature-car-rent-box-1">
                       <h3>Search Your Dream Car</h3>
                       <form action="buy2" method="get">
                           {% csrf_token %}
@@ -106,7 +114,7 @@
                                   <option value = "미니">미니</option>
                                   <option value = "랜드로버">랜드로버</option>
                                   <option value = "포드">포드</option>
-                                  <option value = "폭스바겐">폭스바겐</option>
+                                  <option value = "지프">지프</option>
                               </select></div>
 
                           <div class="form-group col-md-3">
@@ -152,7 +160,7 @@
                               <input style="width:130px;" class="selectpicker" type="text"  id="select10" name="price" placeholder="가격">&nbsp&nbsp
                             <div class="d-flex align-items-center bg-light p-3" style="float:left; width:180px;">
                               <div style="width:90px;">
-                                  <input type="checkbox" class="button" value="encar" name="chk" >Encar
+                                  <input type="checkbox" class="button" value="encar" name="chk" >Encar &nbsp
                               </div>
                               <div style="width:90px;">
                                   <input type="checkbox" class="button" value="Kcar" name="chk" >Kcar
@@ -189,28 +197,70 @@
                                     <h3 class="m-0">Your Neighborhood Dealer</h3>
                                 </div>
                                 <div class="col-md-6 text-md-right">
-                                    <span class="text-primary">0</span> <span>cars available</span></span>
+
+                                    <span class="text-primary">{{total}}</span> <span>cars available</span></span>
+
                                 </div>
                             </div>
                             <div class="row">
-                                <div>
-                                    검색결과가 없습니다
-                            </div>
+                          <table style="width:1280px;margin-left:auto;margin-right:auto;">
+        <thead>
+<!--        <h2 style="margin-left:120px">{{brand}}의 {{name}}차량 검색 결과</h2>-->
+
+        <tr>
+
+            <td>Brand</td>
+            <td>Name</td>
+            <td>Model</td>
+            <td>Trim</td>
+            <td>Accident</td>
+            <td>Fuel</td>
+            <td>Mile</td>
+            <td>Year</td>
+            <td>Location</td>
+            <td>Price</td>
+            <td>Link</td>
+        </tr>
+
+        </thead>
+        <tbody>
+
+        <tr>
+            {%for en in info%}
+            <td>{{en.brand}}</td>
+            <td>{{en.name}}</td>
+            <td>{{en.model}}</td>
+            <td>{{en.trim}}</td>
+            <td>{{en.accident}}</td>
+            <td>{{en.fuel}}</td>
+            <td>{{en.km}}</td>
+            <td>{{en.year}}</td>
+            <td>{{en.location}}</td>
+            <td>{{en.price}}</td>
+            <td><a href="{{en.link}}" target="_blank">BUY LINK</a></td>
+        </tr>
+
+        {%endfor%}
+
+        </tbody>
+    </table>
                         </div>
+
                     </div>
                 </div>
             </div>
-
-
-
-            <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true" ></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a> </center>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-            </p>
-            </p>
         </div>
+
+
+
+        <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Your Neighborhood Dealer <img src="static/home/images/car.gif" target="_blank" style = "width:25px; height:25px;">Day Car </center>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+        </p>
+        </p>
+    </div>
     </div>
 
     </div>

@@ -3,6 +3,11 @@
 <html lang="en">
 
   <head>
+
+      <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <title>DayCar &mdash; Your Neighborhood Dealer</title>
      <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
     <style>
@@ -26,7 +31,8 @@
     <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/buystyle.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <script src="{% static 'home/js/select.js' %}"></script>
 
   </head>
@@ -83,17 +89,16 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-        {% for i in info %}
-      <div class="ftco-cover-1 overlay" style="background-image: url({{i.photo}});">
-          {%endfor%}
+      <div class="ftco-cover-1 overlay" style="background-image: url({% static 'home/images/hero_1.jpg' %});">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-5">
-              <div class="feature-car-rent-box-1">
-                <h3>Range Rover S7</h3>
-               <form action="/buy2" method="get">
+              <div class="col-lg-5">
+                  <div class="feature-car-rent-box-1">
+                      <h3>Search Your Dream Car</h3>
+                      <form action="buy2" method="get">
+                          {% csrf_token %}
                           <div class="form-group col-md-3">
-                              <select class="selectpicker" name='brand' onchange="categoryChange(this)">
+                              <select class="selectpicker" name='brand' onchange="categoryChange(this)" style="width:130px;">
                                   <option value="none" >제조사</option>
                                   <option value = "현대" >현대</option>
                                   <option value = "기아">기아</option>
@@ -107,24 +112,25 @@
                                   <option value = "미니">미니</option>
                                   <option value = "랜드로버">랜드로버</option>
                                   <option value = "포드">포드</option>
-                                  <option value = "지프">지프</option>
+                                  <option value = "폭스바겐">폭스바겐</option>
                               </select></div>
 
                           <div class="form-group col-md-3">
-                              <select id="model" class="selectpicker" name="name">
+                              <select id="model" class="selectpicker" name="name" style="width:130px;">
                                   <option value="none">모델</option>
                               </select></div>
 
-                          <div>
-                              <select  class="selectpicker" id="select3" name="fuel" style="height:30px;width:100px;">
-                                  <option value="" disabled selected hidden>연료</option>
+                          <div class="form-group col-md-3">
+                              <select  class="selectpicker" id="select3" name="fuel" style="width:130px;">
+                                  <option value="none" >연료</option>
                                   <option value = "가솔린">가솔린</option>
                                   <option value = "디젤">디젤</option>
                                   <option value = "LPG">LPG</option>
                                   <option value = "가솔린+전기">하이브리드</option>
                               </select>
-   &nbsp;
-                              <select class="selectpicker"  id="select9" name="loc" style="height:30px;width:100px;">
+   &nbsp;                      </div>
+                          <div class="form-group col-md-3">
+                              <select class="selectpicker"  id="select9" name="loc" style="width:130px;">
                                   <option value="" disabled selected hidden>지역</option>
                                   <option value = "서울">서울</option>
                                   <option value = "경기/인천">경기/인천</option>
@@ -136,46 +142,51 @@
                                   <option value = "경남">경남</option>
                               </select>
                           </div>
-                          <div>
-                              <input style="height:30px;width:100px;" type="text"   name="year" placeholder="연식" >~
-                              <input style="height:30px;width:100px;" type="text"   name="year1" placeholder="연식" style="height:30px;weight:50px;">
-                          </div>
-                          <div>
-
-                              <input style="height:30px; width:100px;" type="text"   name="km" placeholder="주행거리">~
-                              <input style="height:30px; width:100px;" type="text"   name="km1" placeholder="주행거리">
-                          </div>
-                          <div>
-                              <input style="height:30px; width:100px;" type="text"  id="select10" name="price" placeholder="가격">
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px; float: left; " class="selectpicker" type="text"   name="year" placeholder="연식" >
+                              <span style="font-size:30px;"> ~ </span>
+                              <input style="width:130px; float: right;" class="selectpicker" type="text"   name="year1" placeholder="연식">
                           </div>
 
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px;" class="selectpicker" type="text"   name="km" placeholder="주행거리">
+                              <span style="font-size:30px;"> ~ </span>
+                              <input style="width:130px;" class="selectpicker" type="text"   name="km1" placeholder="주행거리">
+                          </div>
 
-    <div class="d-flex align-items-center bg-light p-3">
-                          <div>
-
-                              <input type="checkbox" class="button" value="encar" name="chk">Encar
-
-                              <input type="submit" class="button" value="search">
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px;" class="selectpicker" type="text"  id="select10" name="price" placeholder="가격">&nbsp&nbsp
+                            <div class="d-flex align-items-center bg-light p-3" style="float:left; width:180px;">
+                              <div style="width:90px;">
+                                  <input type="checkbox" class="button" value="encar" name="chk" >Encar
+                              </div>
+                              <div style="width:90px;">
+                                  <input type="checkbox" class="button" value="Kcar" name="chk" >Kcar
+                              </div>
+                            </div>
                           </div>
 
 
-                      </div>
+                        <div style="display:flex; align-items: center; justify-content:center;">
+                          <div>
+                              <input type="submit" class="button" value="search" id="execute" >
+                          </div>
+                        </div>
+
+
+
 
                       </form>
-                  <div class="d-flex align-items-center bg-light p-3">
-                      <span> ₩ 10,000,000 </span>
-
 
                   </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
 
         <div class="site-section pt-0 pb-0 bg-light">
-            <div class="container">
+<div class="container">
                 <div class="row">
                     <div class="col-12">
 
@@ -200,6 +211,8 @@
             <td>Brand</td>
             <td>Name</td>
             <td>Model</td>
+            <td>Trim</td>
+            <td>Accident</td>
             <td>Fuel</td>
             <td>Mile</td>
             <td>Year</td>
@@ -212,23 +225,27 @@
         <tbody>
 
         <tr>
-            {%for en in info%}
+{%for en in info%}
             <td>{{en.brand}}</td>
             <td>{{en.name}}</td>
-            <td>{{en.info}}</td>
-            <td>{{en.type}}</td>
+            <td>{{en.model}}</td>
+            <td>{{en.trim}}</td>
+            <td>{{en.accident}}</td>
+            <td>{{en.fuel}}</td>
             <td>{{en.km}}</td>
             <td>{{en.year}}</td>
             <td>{{en.location}}</td>
             <td>{{en.price}}</td>
             <td><a href="{{en.link}}" target="_blank">BUY LINK</a></td>
-        </tr>
 
-        {%endfor%}
+        </tr>
+{%endfor%}
+
 
         </tbody>
     </table>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -236,21 +253,17 @@
 
 
 
-        <p>
+
+            <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Your Neighborhood Dealer <img src="static/home/images/car.gif" target="_blank" style = "width:25px; height:25px;">Day Car </center>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true" ></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a> </center>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-        </p>
-        </p>
-    </div>
+
+        </div>
     </div>
 
-    </div>
-    </div>
-    </footer>
 
-    </div>
 
     <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'home/js/popper.min.js' %}"></script>
@@ -265,6 +278,8 @@
     <script src="{% static 'home/js/aos.js' %}"></script>
 
     <script src="{% static 'home/js/main.js' %}"></script>
+
+
 
   </body>
 

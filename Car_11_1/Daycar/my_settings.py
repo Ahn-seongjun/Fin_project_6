@@ -1,7 +1,7 @@
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'car_info',
+        'NAME': 'data',
         'USER': 'root',
         'PASSWORD': '0000',
         'HOST': '127.0.0.1',
