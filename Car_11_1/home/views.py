@@ -8,8 +8,12 @@ import joblib
 from django.core import serializers
 # import simplejson as json
 from django.views.decorators.csrf import csrf_exempt
+<<<<<<< HEAD
 # import xgboost
 import numpy as np
+=======
+import xgboost
+>>>>>>> 8835036504b83307efa028275dc3288bad6d87ea
 # Create your views here.
 
 TEMPLATE_DIRS= (
@@ -75,7 +79,11 @@ def sell(request):
     km = request.GET.get("km", "")
     trim1 = get_trim(bra,trim)
     a = to_csv(bra,na,trim1,fuel,year,acci,color,wd,km)
+<<<<<<< HEAD
     model = joblib.load('LinearRegression.pkl')
+=======
+    model = joblib.load('home/model/XGBoost 최종모델2.pkl')
+>>>>>>> 8835036504b83307efa028275dc3288bad6d87ea
     price = model.predict(a)
     price = np.expm1(price)
     return render(request,'sell.html',{'price':price})

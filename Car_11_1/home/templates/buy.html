@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/buystyle.css' %}">
     <script src="{% static 'home/js/select.js' %}"></script>
 
   </head>
@@ -97,7 +97,7 @@
                       <form action="buy2" method="get">
 
                           <div class="form-group col-md-3">
-                              <select class="selectpicker" name='brand' onchange="categoryChange(this)">
+                              <select class="selectpicker" name='brand' onchange="categoryChange(this)" style="width:130px;">
                                   <option value="none" >제조사</option>
                                   <option value = "현대" >현대</option>
                                   <option value = "기아">기아</option>
@@ -115,20 +115,21 @@
                               </select></div>
 
                           <div class="form-group col-md-3">
-                              <select id="model" class="selectpicker" name="name">
+                              <select id="model" class="selectpicker" name="name" style="width:130px;">
                                   <option value="none">모델</option>
                               </select></div>
 
-                          <div>
-                              <select  class="selectpicker" id="select3" name="fuel" style="height:30px;width:100px;">
-                                  <option value="" disabled selected hidden>연료</option>
+                          <div class="form-group col-md-3">
+                              <select  class="selectpicker" id="select3" name="fuel" style="width:130px;">
+                                  <option value="none" >연료</option>
                                   <option value = "가솔린">가솔린</option>
                                   <option value = "디젤">디젤</option>
                                   <option value = "LPG">LPG</option>
                                   <option value = "가솔린+전기">하이브리드</option>
                               </select>
-   &nbsp;
-                              <select class="selectpicker"  id="select9" name="loc" style="height:30px;width:100px;">
+   &nbsp;                      </div>
+                          <div class="form-group col-md-3">
+                              <select class="selectpicker"  id="select9" name="loc" style="width:130px;">
                                   <option value="" disabled selected hidden>지역</option>
                                   <option value = "서울">서울</option>
                                   <option value = "경기/인천">경기/인천</option>
@@ -140,31 +141,47 @@
                                   <option value = "경남">경남</option>
                               </select>
                           </div>
-                          <div>
-                              <input style="height:30px;width:100px;" type="text"   name="year" placeholder="연식" >~
-                              <input style="height:30px;width:100px;" type="text"   name="year1" placeholder="연식" style="height:30px;weight:50px;">
-                          </div>
-                          <div>
-
-                              <input style="height:30px; width:100px;" type="text"   name="km" placeholder="주행거리">~
-                              <input style="height:30px; width:100px;" type="text"   name="km1" placeholder="주행거리">
-                          </div>
-                          <div>
-                              <input style="height:30px; width:100px;" type="text"  id="select10" name="price" placeholder="가격">
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px; float: left; " class="selectpicker" type="text"   name="year" placeholder="연식" >
+                              <span style="font-size:30px;"> ~ </span>
+                              <input style="width:130px; float: right;" class="selectpicker" type="text"   name="year1" placeholder="연식">
                           </div>
 
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px;" class="selectpicker" type="text"   name="km" placeholder="주행거리">
+                              <span style="font-size:30px;"> ~ </span>
+                              <input style="width:130px;" class="selectpicker" type="text"   name="km1" placeholder="주행거리">
+                          </div>
 
-    <div class="d-flex align-items-center bg-light p-3">
+                          <div class="form-group col-md-3" style="display:flex;">
+                              <input style="width:130px;" class="selectpicker" type="text"  id="select10" name="price" placeholder="가격">&nbsp&nbsp
+                            <div class="d-flex align-items-center bg-light p-3" style="float:left; width:180px;">
+                              <div style="width:90px;">
+                                  <input type="checkbox" class="button" value="encar" name="chk" >Encar &nbsp
+                              </div>
+                              <div style="width:90px;">
+                                  <input type="checkbox" class="button" value="Kcar" name="chk" >Kcar
+                              </div>
+                            </div>
+                          </div>
+
+
+                        <div style="display:flex; align-items: center; justify-content:center;">
                           <div>
+<<<<<<< HEAD
 
                               <input type="radio" class="button" value="encar" name="chk">Encar
                               <input type="radio" class="button" value="encar" name="chk">kcar
 
                               <input type="submit" class="button" value="search">
+=======
+                              <input type="submit" class="button" value="search" id="execute" >
+>>>>>>> 8835036504b83307efa028275dc3288bad6d87ea
                           </div>
+                        </div>
 
 
-                      </div>
+
 
                       </form>
 
@@ -176,32 +193,13 @@
     </div>
 
         <div class="site-section pt-0 pb-0 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
 
-                        <div class="trip-form">
-                            <div class="row align-items-center mb-4">
-                                <div class="col-md-6">
-                                    <h3 class="m-0">Your Neighborhood Dealer</h3>
-                                </div>
-<!--                                <div class="col-md-6 text-md-right">-->
-<!--                                    <span class="text-primary">32</span> <span>cars available</span></span>-->
-<!--                                </div>-->
-                            </div>
-                            <div class="row">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
 
             <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true" ></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a> </center>
+            <center> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Your Neighborhood Dealer <img src="static/home/images/car.gif" target="_blank" style = "width:25px; height:25px;">Day Car </center>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 
