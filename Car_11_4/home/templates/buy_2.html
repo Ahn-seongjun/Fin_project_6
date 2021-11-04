@@ -32,6 +32,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'home/css/buystyle.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <script src="{% static 'home/js/select.js' %}"></script>
 
   </head>
@@ -59,7 +60,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="/">DayCar</a>
+                <a href="/index"><img src="static/home/images/car.gif" target="_blank" style = "width:30px; height:30px;">DayCar</a>
               </div>
             </div>
 
@@ -87,9 +88,10 @@
 
       </header>
 
-
     <div class="ftco-blocks-cover-1">
-      <div class="ftco-cover-1 overlay" style="background-image: url({% static 'home/images/hero_1.jpg' %});">
+        {% for i in info %}
+      <div class="ftco-cover-1 overlay" style="background-image: url({{i.photo}});">
+          {%endfor%}
         <div class="container">
           <div class="row align-items-center">
               <div class="col-lg-5">
@@ -180,22 +182,76 @@
 
                   </div>
               </div>
-
-<!--              <div id="rank">-->
-<!--                  {%for i in first%}-->
-<!--                  <div style="color:white;">{{i.name}}</div>-->
-
-<!--                  {%endfor%}-->
-<!--                  {%for i in rank%}-->
-<!--                  <div style="color:white;">{{i.brand}}</div>-->
-<!--                  {%endfor%}-->
-              </div>
           </div>
         </div>
       </div>
     </div>
 
         <div class="site-section pt-0 pb-0 bg-light">
+<div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="trip-form">
+                            <div class="row align-items-center mb-4">
+                                <div class="col-md-6">
+                                    <h3 class="m-0">Your Neighborhood Dealer</h3>
+                                </div>
+                                <div class="col-md-6 text-md-right">
+
+                                    <span class="text-primary">{{total}}</span> <span>cars available</span></span>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                          <table style="width:1280px;margin-left:auto;margin-right:auto;">
+        <thead>
+<!--        <h2 style="margin-left:120px">{{brand}}의 {{name}}차량 검색 결과</h2>-->
+
+        <tr>
+
+            <td>Brand</td>
+            <td>Name</td>
+            <td>Model</td>
+            <td>Trim</td>
+            <td>Accident</td>
+            <td>Fuel</td>
+            <td>Mile</td>
+            <td>Year</td>
+            <td>Location</td>
+            <td>Price</td>
+            <td>Link</td>
+        </tr>
+
+        </thead>
+        <tbody>
+
+        <tr>
+{%for en in info%}
+            <td>{{en.brand}}</td>
+            <td>{{en.name}}</td>
+            <td>{{en.model}}</td>
+            <td>{{en.trim}}</td>
+            <td>{{en.accident}}</td>
+            <td>{{en.fuel}}</td>
+            <td>{{en.km}}</td>
+            <td>{{en.year}}</td>
+            <td>{{en.location}}</td>
+            <td>{{en.price}}</td>
+            <td><a href="{{en.link}}" target="_blank">BUY LINK</a></td>
+
+        </tr>
+{%endfor%}
+
+
+        </tbody>
+    </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
