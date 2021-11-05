@@ -53,7 +53,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="/">DayCar</a>
+                <a href="/"><img src="static/home/images/car.gif" target="_blank" style = "width:30px; height:30px;">DayCar</a>
               </div>
             </div>
 
@@ -71,7 +71,16 @@
                   <li><a href="/cars" class="nav-link">가격동향</a></li>
                   <li><a href="/topics" class="nav-link">Hot Topic</a></li>
                   <li><a href="/about" class="nav-link">About Us</a></li>
-                    <li><a href="/Login" class="nav-link">회원가입/로그인</a></li>
+                    {% if user.is_authenticated %}
+                        <p>{{ user.username }}</p>
+                        <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+                        <form id="logout" method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %} <input type="hidden" />
+                        </form>
+                    {% else %}
+                        <a href="{% url 'signup' %}">회원가입</a>
+                        <a href="{% url 'login' %}">로그인</a>
+                    {% endif %}
                 </ul>
               </nav>
             </div>
@@ -89,7 +98,7 @@
             <div class="col-lg-5">
 
 
-                  <div><h1>{{brand}} {{name}} <br>₩{{price}} 만원입니다.</h1>
+                  <div><h1 style="width:450px">{{brand}} {{name}} <br>₩{{price}} 만원입니다.</h1>
                   <h6 style="color:white">적정판매가 : {{under}}~{{over}}</h6>
                   <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="상기 가격은 차량 세부 옵션에 따라 변동될 수 있습니다."">Tooltip on bottom</button>
                     </div>

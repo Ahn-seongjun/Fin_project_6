@@ -52,4 +52,17 @@ from django.db import models
 #         managed = False
 #         db_table = 'search'
 
+
+class News(models.Model):
+    title = models.CharField(max_length=2000, blank=True, null=True)
+    script = models.TextField(blank=True, null=True)
+    link = models.CharField(max_length=2000, blank=True, null=True)
+    media = models.CharField(max_length=20, blank=True, null=True)
+    image = models.CharField(max_length=2000, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'news'
+
+
 # Create your models here.

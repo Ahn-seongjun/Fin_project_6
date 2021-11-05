@@ -71,7 +71,16 @@
                   <li><a href="/cars" class="nav-link">가격 동향</a></li>
                   <li><a href="/topics" class="nav-link">Hot Topic</a></li>
                   <li class="active"><a href="/about" class="nav-link">About Us</a></li>
-                  <li><a href="/Login" class="nav-link">회원가입/로그인</a></li>
+                  {% if user.is_authenticated %}
+                        <p>{{ user.username }}</p>
+                        <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+                        <form id="logout" method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %} <input type="hidden" />
+                        </form>
+                    {% else %}
+                        <a href="{% url 'signup' %}">회원가입</a>
+                        <a href="{% url 'login' %}">로그인</a>
+                    {% endif %}
                 </ul>
               </nav>
             </div>
